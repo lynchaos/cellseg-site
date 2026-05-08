@@ -459,32 +459,69 @@ ul           { list-style: none; }
 /* ─── Download page ─────────────────────────────────────── */
 .download-hero { padding: 3.5rem 0 2.5rem; text-align: center; }
 
-.download-card {
-  background: var(--surface);
+/* ─── Download hero ─────────────────────────────────────── */
+.download-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(135deg, var(--primary-bg) 0%, #d4ede9 100%);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 2.25rem 2rem;
-  box-shadow: var(--shadow);
-  max-width: 460px;
-  margin: 0 auto 2.25rem;
-  text-align: center;
+  border-radius: 16px;
+  padding: 2.25rem 2.5rem;
+  margin-bottom: 2.25rem;
 }
-.download-card .app-name {
-  font-size: 1.5rem;
+.download-hero-info .app-name {
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 0.25rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
 }
-.download-card .app-meta {
+.download-hero-info .app-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.2em 0.65em;
+  border-radius: 20px;
+}
+.download-hero-info .app-meta {
   font-size: 0.875rem;
   color: var(--text-subtle);
-  margin-bottom: 1.5rem;
 }
-.download-card .release-link {
-  display: block;
-  margin-top: 1rem;
+.download-hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+.download-hero-actions .release-link {
   font-size: 0.8rem;
   color: var(--text-light);
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .download-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+  .download-hero-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+  .download-hero-actions .btn { text-align: center; }
 }
 
 /* ─── Footer ────────────────────────────────────────────── */

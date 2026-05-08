@@ -6,15 +6,16 @@ page_hero_subtitle: Free, open source. Android 8.0 (API&nbsp;26) or later. No ac
 description: Download the latest CellSeg APK for Android 8.0 (API 26) and later. Free and open source.
 ---
 
-<div class="download-card">
+<div class="download-hero">
+<div class="download-hero-info">
 <div class="app-name">CellSeg</div>
-<div class="app-meta">On-device cell segmentation &middot; Android</div>
-<a class="btn btn-primary btn-lg"
-   href="https://github.com/lynchaos/CellSeg/releases/latest"
-   target="_blank" rel="noopener noreferrer">&#8659;&nbsp; Download latest APK</a>
-<a class="release-link"
-   href="https://github.com/lynchaos/CellSeg/releases"
-   target="_blank" rel="noopener noreferrer">All releases on GitHub ↗</a>
+<div class="app-badges"><span class="badge">Free &amp; open source</span><span class="badge">Android 8.0+</span><span class="badge">No account needed</span><span class="badge">Works offline</span></div>
+<div class="app-meta">On-device cell segmentation &middot; Cellpose cyto3 &middot; ~26 MB model</div>
+</div>
+<div class="download-hero-actions">
+<a class="btn btn-primary btn-lg" href="https://github.com/lynchaos/CellSeg/releases/latest" target="_blank" rel="noopener noreferrer">&#8659;&nbsp; Download latest APK</a>
+<a class="release-link" href="https://github.com/lynchaos/CellSeg/releases" target="_blank" rel="noopener noreferrer">All releases on GitHub ↗</a>
+</div>
 </div>
 
 <div class="warn">
