@@ -27,7 +27,7 @@ description: How to use CellSeg — getting started, segmentation modes, paramet
 ### 1 — Install and download the model
 
 After installing the APK ([Download](/download)), launch CellSeg.
-On the first run the app offers to download the Cellpose cyto3 ONNX model (~26 MB).
+On the first run the app offers to download the Cellpose cyto3 ONNX model (~14 MB).
 Accept the prompt, or visit **Settings → Model management → Download model** later.
 A Wi-Fi connection is recommended for the initial download.
 
@@ -248,7 +248,7 @@ Access via **Settings → Model management**.
 | Format | ONNX FP16 |
 | Input | 1 × 2 × H × W (normalised brightfield + nucleus channel) |
 | Output | Flows (dX, dY), cell probability |
-| File size | ~26 MB |
+| File size | ~14 MB |
 | Execution provider | XNNPACK (CPU) |
 
 ---

@@ -12,7 +12,7 @@ description: >-
 <div class="container">
 <div class="hero-badge">⚠ Research use only &mdash; not a medical device</div>
 <h1>Segment cells<br><em>on your device</em></h1>
-<p class="hero-sub">After a one-time ~26&nbsp;MB model download, segmentation runs entirely on your Android phone &mdash; no cloud, no account, no data upload required for inference.</p>
+<p class="hero-sub">After a one-time ~14&nbsp;MB model download, segmentation runs entirely on-device &mdash; no cloud, no account, no data upload required for inference.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="/download">&#8659; Download APK</a>
 <a class="btn btn-outline btn-lg" href="https://github.com/lynchaos/CellSeg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -30,7 +30,7 @@ description: >-
 <div class="feature-card">
 <div class="feature-icon">🧫</div>
 <h3>On-device inference</h3>
-<p>The 26 MB Cellpose cyto3 ONNX (FP16) model runs fully on-device via ONNX Runtime 1.19 with XNNPACK acceleration. No internet required.</p>
+<p>The ~14 MB Cellpose cyto3 ONNX (FP16) model runs fully on-device via ONNX Runtime 1.19 with XNNPACK acceleration. No internet required.</p>
 </div>
 <div class="feature-card">
 <div class="feature-icon">☁</div>

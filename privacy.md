@@ -27,7 +27,7 @@ and any cloud segmentation requests you explicitly initiate yourself.
 
 When using **local segmentation** (the default), no image data or metadata ever leaves your
 device. The only network request CellSeg makes is a **one-time download** of the ONNX model
-file (~26 MB) from the configured model host (currently a public Hugging Face repository).
+file (~14 MB) from the configured model host (currently a public Hugging Face repository).
 
 After the model has been downloaded, local segmentation works entirely offline.
 
