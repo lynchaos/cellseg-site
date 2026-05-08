@@ -1,39 +1,31 @@
 ---
 layout: default
 title: About
-description: About CellSeg, the Cellpose model, the author, and the open-source licence.
+page_hero_title: About CellSeg
+page_hero_subtitle: On-device cell segmentation for Android &mdash; built on Cellpose cyto3.
+description: About CellSeg, the Cellpose model, licensing, author, and open-source attribution.
 ---
-
-<div class="page-hero">
-  <div class="container">
-    <h1>About CellSeg</h1>
-    <p>On-device cell segmentation for Android &mdash; built on Cellpose cyto3.</p>
-  </div>
-</div>
-
-<div class="content">
-  <div class="container">
 
 ## What is CellSeg?
 
-CellSeg is a free, open-source Android application for quantitative cell segmentation
-of microscopy images. It is designed for researchers and field scientists who need rapid,
+CellSeg is a free, open-source Android application for quantitative cell segmentation of
+microscopy images. It is designed for researchers and field scientists who need rapid,
 reproducible cell counting without cloud dependencies or specialised desktop hardware.
 
 Key design goals:
 
-- **Offline-first** — the full segmentation pipeline runs on-device.
-- **Quantitative** — cell count, confluence, area statistics, and density are computed per run.
-- **Privacy-preserving** — no analytics, no data upload in local mode.
-- **Open** — MIT-licensed source, MIT-licensed model weights (Cellpose BSD-3-Clause).
+- **Offline-first** — the full segmentation pipeline runs on-device after a one-time model download.
+- **Quantitative** — cell count, confluence %, mean/median cell area, and density are computed per run.
+- **Privacy-preserving** — no analytics, no crash reporters, no data upload in local mode.
+- **Open** — MIT-licensed source code; Cellpose model under BSD 3-Clause.
 
 ## The model: Cellpose cyto3
 
-CellSeg uses the **Cellpose cyto3** generalised segmentation model, exported to ONNX FP16
-format. The model was trained by Carsen Stringer, Tim Wang, Michaël Pachitariu,
-and collaborators at HHMI Janelia Research Campus.
+CellSeg uses the **Cellpose cyto3** generalised cell segmentation model, exported to ONNX FP16
+format for on-device inference via ONNX Runtime 1.19 with XNNPACK acceleration.
 
-The model is distributed under the **BSD 3-Clause Licence**.
+The model was trained by **Carsen Stringer**, **Tim Wang**, **Michaël Pachitariu**,
+and collaborators at HHMI Janelia Research Campus.
 
 ### Citation
 
@@ -49,39 +41,143 @@ If you use CellSeg in published research, please cite the original Cellpose pape
 > *Nature Methods* 19, 1634–1641 (2022).
 > [https://doi.org/10.1038/s41592-022-01663-4](https://doi.org/10.1038/s41592-022-01663-4)
 
-The full attribution and all third-party licences are published in the
-[NOTICE](https://github.com/lynchaos/cellseg/blob/main/NOTICE) file.
+## Licences
+
+### CellSeg — MIT Licence
+
+```
+MIT License
+
+Copyright (c) 2025–2026 Kemal Yaylali
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### Cellpose — BSD 3-Clause Licence
+
+The Cellpose cyto3 model weights and source code are distributed under the BSD 3-Clause Licence:
+
+```
+BSD 3-Clause License
+
+Copyright © 2020 Howard Hughes Medical Institute
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software without
+   specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+Model homepage: [github.com/MouseLand/cellpose](https://github.com/MouseLand/cellpose)
+
+### ONNX Runtime — MIT Licence
+
+ONNX Runtime is used for on-device model inference.
+
+```
+MIT License
+
+Copyright (c) Microsoft Corporation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### Third-party software
+
+The following open-source libraries are used in CellSeg. All are included unmodified.
+Full licence texts are in the
+[NOTICE](https://github.com/lynchaos/CellSeg/blob/main/NOTICE) file.
+
+| Library | Version | Licence | Copyright |
+|---|---|---|---|
+| Jetpack Compose (UI, Foundation, Material3) | 1.7.x | Apache 2.0 | Google LLC |
+| Compose Navigation | 2.8.x | Apache 2.0 | Google LLC |
+| AndroidX Room | 2.6.x | Apache 2.0 | Google LLC |
+| AndroidX DataStore (Proto) | 1.1.x | Apache 2.0 | Google LLC |
+| AndroidX Security Crypto | 1.1.x | Apache 2.0 | Google LLC |
+| CameraX (core, camera2, lifecycle, view) | 1.4.x | Apache 2.0 | Google LLC |
+| Hilt (Dagger Android) | 2.51.x | Apache 2.0 | Google LLC |
+| Protocol Buffers (protobuf-javalite) | 4.x | BSD 3-Clause | Google LLC |
+| Moshi (core + Kotlin codegen) | 1.15.x | Apache 2.0 | Square, Inc. |
+| Retrofit | 2.11.x | Apache 2.0 | Square, Inc. |
+| OkHttp | 4.12.x | Apache 2.0 | Square, Inc. |
+| Coil (compose) | 2.7.x | Apache 2.0 | Coil Contributors |
+| Timber | 5.0.x | Apache 2.0 | Jake Wharton |
+| Google Tink (via Security Crypto) | 1.x | Apache 2.0 | Google LLC |
+
+The Apache 2.0 Licence can be read at
+[apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Author
 
 **Kemal Yaylali**
-[yaylali.uk](https://yaylali.uk) &middot; `support@yaylali.uk`
-
-## Licence
-
-CellSeg is released under the **MIT Licence**. You are free to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the software under
-the terms of that licence.
-
-See [LICENSE](https://github.com/lynchaos/cellseg/blob/main/LICENSE) for the full text.
-Third-party attributions are listed in [NOTICE](https://github.com/lynchaos/cellseg/blob/main/NOTICE).
+[yaylali.uk](https://yaylali.uk) &middot; GitHub: [@lynchaos](https://github.com/lynchaos) &middot; `support@yaylali.uk`
 
 ## Contributing
 
 Contributions are welcome — bug reports, feature requests, and pull requests.
-Please read [CONTRIBUTING.md](https://github.com/lynchaos/cellseg/blob/main/CONTRIBUTING.md)
+Please read [CONTRIBUTING.md](https://github.com/lynchaos/CellSeg/blob/main/CONTRIBUTING.md)
 before opening a pull request.
 
 ## Disclaimer
 
 <div class="warn">
-  <strong>Research use only.</strong>
-  CellSeg is an experimental research tool. It is <strong>not a medical device</strong>,
-  is not CE-marked, and is not FDA-cleared or FDA-approved.
-  Results must not be used for clinical, diagnostic, or therapeutic decision-making.
-  Always validate outputs against established laboratory methods before relying on them
-  for any consequential decision.
-</div>
-
-  </div>
+<strong>Research use only.</strong>
+CellSeg is an experimental research tool. It is <strong>not a medical device</strong>,
+is not CE-marked, and is not FDA-cleared or FDA-approved.
+Results must not be used for clinical, diagnostic, or therapeutic decision-making.
+Always validate outputs against established laboratory methods before relying on them
+for any consequential decision.
 </div>

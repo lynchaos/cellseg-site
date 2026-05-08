@@ -1,5 +1,6 @@
 ---
 layout: default
+home: true
 title: CellSeg — On-device cell segmentation for Android
 description: >-
   Segment brightfield, phase-contrast, and fluorescence microscopy images

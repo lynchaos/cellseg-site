@@ -46,7 +46,21 @@
   </header>
 
   <main class="site-main">
-    {{ content }}
+    {% if page.home %}
+      {{ content }}
+    {% else %}
+      <div class="page-hero">
+        <div class="container">
+          <h1>{{ page.page_hero_title | default: page.title }}</h1>
+          {% if page.page_hero_subtitle %}<p>{{ page.page_hero_subtitle }}</p>{% endif %}
+        </div>
+      </div>
+      <div class="content">
+        <div class="container">
+          {{ content }}
+        </div>
+      </div>
+    {% endif %}
   </main>
 
   <footer class="site-footer">

@@ -420,6 +420,42 @@ ul           { list-style: none; }
 .warn strong,
 .note strong { display: block; margin-bottom: 0.2rem; }
 
+.tip {
+  border-left: 4px solid var(--primary-light);
+  padding: 0.85rem 1.1rem;
+  background: var(--primary-bg);
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0 1.5rem;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+.tip strong { display: block; margin-bottom: 0.2rem; }
+
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+  display: inline-block;
+  min-width: 220px;
+}
+.toc strong {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 0.6rem;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.toc li { margin-bottom: 0.3rem; }
+.toc a  { color: var(--primary); font-size: 0.875rem; }
+
 /* ─── Download page ─────────────────────────────────────── */
 .download-hero { padding: 3.5rem 0 2.5rem; text-align: center; }
 
