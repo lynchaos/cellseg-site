@@ -24,8 +24,7 @@ Key design goals:
 CellSeg uses the **Cellpose cyto3** generalised cell segmentation model, exported to ONNX FP16
 format for on-device inference via ONNX Runtime 1.19 with XNNPACK acceleration.
 
-The model was trained by **Carsen Stringer**, **Tim Wang**, **Marius Pachitariu**,
-and collaborators at HHMI Janelia Research Campus.
+The cyto3 model is part of the Cellpose project led by **Carsen Stringer** and **Marius Pachitariu** at HHMI Janelia Research Campus.
 
 ### Citation
 
@@ -81,58 +80,29 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### Cellpose — BSD 3-Clause Licence (codebase)
+### Cellpose codebase — BSD 3-Clause Licence
 
-The Cellpose **source code** is distributed under the BSD 3-Clause Licence:
+The Cellpose source code is released under the BSD 3-Clause Licence
+(Copyright © 2020 Howard Hughes Medical Institute). The full licence text is
+in the upstream repository at
+[github.com/MouseLand/cellpose/blob/main/LICENSE](https://github.com/MouseLand/cellpose/blob/main/LICENSE).
 
-```
-BSD 3-Clause License
+### Cellpose cyto3 weights — redistributed with permission
 
-Copyright © 2020 Howard Hughes Medical Institute
+The cyto3 model weights themselves do not have an explicit upstream licence
+statement. They are redistributed in this app's ONNX form at
+[huggingface.co/kmlyyll/cellpose-cyto3-onnx](https://huggingface.co/kmlyyll/cellpose-cyto3-onnx)
+with the explicit permission of the upstream authors at HHMI Janelia, granted by
+Marius Pachitariu (May 2026), under the conditions of:
 
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
+1. **Attribution** of the Cellpose papers and project.
+2. **Licence propagation** — this notice must travel with any further redistribution.
 
-1. Redistributions of source code must retain the above copyright notice,
-   this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
-3. Neither the name of the copyright holder nor the names of its contributors
-   may be used to endorse or promote products derived from this software without
-   specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-```
-
-Model homepage: [github.com/MouseLand/cellpose](https://github.com/MouseLand/cellpose)
-
-### Cellpose cyto3 model weights — redistribution by permission
-
-The Cellpose cyto3 **model weights**, converted to ONNX FP16 format and hosted at
-`huggingface.co/kmlyyll/cellpose-cyto3-onnx`, are redistributed with the explicit
-permission of the upstream authors at HHMI Janelia Research Campus, granted by
-**Marius Pachitariu** (May 2026), under the conditions of:
-
-1. **Attribution** — the original authors (Stringer, Wang, Pachitariu et al.) must be
-   credited in any derivative work or redistribution.
-2. **Licence propagation** — any redistribution of the weights (or derivatives thereof)
-   must reproduce this notice and link back to the upstream Cellpose repository.
-
-The upstream Segment Anything (SAM) component of Cellpose-SAM is separately
-licensed under the Apache 2.0 Licence, which permits commercial applications,
-per Michael Perham, Director of Janelia Innovations & Open Science.
+For completeness on the upstream chain: Cellpose-SAM (used by the app's optional
+cloud mode) sits on top of Segment Anything (SAM) weights. Per Michael Perham
+(Director, Janelia Innovations & Open Science at HHMI Janelia, May 2026), these
+upstream SAM weights carry a fully permissive licence that allows commercial
+applications.
 
 ### ONNX Runtime — MIT Licence
 
