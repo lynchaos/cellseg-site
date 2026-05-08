@@ -17,14 +17,14 @@ Key design goals:
 - **Offline-first** — the full segmentation pipeline runs on-device after a one-time model download.
 - **Quantitative** — cell count, confluence %, mean/median cell area, and density are computed per run.
 - **Privacy-preserving** — no analytics, no crash reporters, no data upload in local mode.
-- **Open** — MIT-licensed source code; Cellpose model under BSD 3-Clause.
+- **Open** — MIT-licensed source code; Cellpose codebase under BSD 3-Clause.
 
 ## The model: Cellpose cyto3
 
 CellSeg uses the **Cellpose cyto3** generalised cell segmentation model, exported to ONNX FP16
 format for on-device inference via ONNX Runtime 1.19 with XNNPACK acceleration.
 
-The model was trained by **Carsen Stringer**, **Tim Wang**, **Michaël Pachitariu**,
+The model was trained by **Carsen Stringer**, **Tim Wang**, **Marius Pachitariu**,
 and collaborators at HHMI Janelia Research Campus.
 
 ### Citation
@@ -40,6 +40,18 @@ If you use CellSeg in published research, please cite the original Cellpose pape
 > **Cellpose 2.0: how to train your own model.**
 > *Nature Methods* 19, 1634–1641 (2022).
 > [https://doi.org/10.1038/s41592-022-01663-4](https://doi.org/10.1038/s41592-022-01663-4)
+
+> Stringer, C. & Pachitariu, M.
+> **Cellpose3: one-click image restoration for improved cellular segmentation.**
+> *Nature Methods* 22, 592–599 (2025).
+> [https://doi.org/10.1038/s41592-025-02595-5](https://doi.org/10.1038/s41592-025-02595-5)
+> *(This is the cyto3 model used in CellSeg.)*
+
+> Pachitariu, M., Rariden, M. & Stringer, C.
+> **Cellpose-SAM: superhuman generalisation for cellular segmentation.**
+> *bioRxiv* (2025).
+> [https://doi.org/10.1101/2025.04.28.651001](https://doi.org/10.1101/2025.04.28.651001)
+> *(Used in cloud/HuggingFace inference mode.)*
 
 ## Licences
 
@@ -69,9 +81,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### Cellpose — BSD 3-Clause Licence
+### Cellpose — BSD 3-Clause Licence (codebase)
 
-The Cellpose cyto3 model weights and source code are distributed under the BSD 3-Clause Licence:
+The Cellpose **source code** is distributed under the BSD 3-Clause Licence:
 
 ```
 BSD 3-Clause License
@@ -105,6 +117,22 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
 Model homepage: [github.com/MouseLand/cellpose](https://github.com/MouseLand/cellpose)
+
+### Cellpose cyto3 model weights — redistribution by permission
+
+The Cellpose cyto3 **model weights**, converted to ONNX FP16 format and hosted at
+`huggingface.co/lynchaos/cellpose-cyto3-onnx`, are redistributed with the explicit
+permission of the upstream authors at HHMI Janelia Research Campus, granted by
+**Marius Pachitariu** (May 2026), under the conditions of:
+
+1. **Attribution** — the original authors (Stringer, Wang, Pachitariu et al.) must be
+   credited in any derivative work or redistribution.
+2. **Licence propagation** — any redistribution of the weights (or derivatives thereof)
+   must reproduce this notice and link back to the upstream Cellpose repository.
+
+The upstream Segment Anything (SAM) component of Cellpose-SAM is separately
+licensed under the Apache 2.0 Licence, which permits commercial applications,
+per Michael Perham, Director of Janelia Innovations & Open Science.
 
 ### ONNX Runtime — MIT Licence
 

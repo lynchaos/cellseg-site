@@ -8,7 +8,7 @@ description: >-
 url: "https://cellseg.yaylali.uk"
 baseurl: ""
 
-github_repo: "https://github.com/lynchaos/cellseg"
+github_repo: "https://github.com/lynchaos/CellSeg"
 github_username: "lynchaos"
 author:
   name: "Kemal Yaylali"

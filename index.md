@@ -12,7 +12,7 @@ description: >-
 <div class="container">
 <div class="hero-badge">⚠ Research use only &mdash; not a medical device</div>
 <h1>Segment cells<br><em>on your device</em></h1>
-<p class="hero-sub">CellSeg runs the Cellpose cyto3 model entirely on your Android phone &mdash; no cloud, no account, no data upload required for local inference.</p>
+<p class="hero-sub">After a one-time ~26&nbsp;MB model download, segmentation runs entirely on your Android phone &mdash; no cloud, no account, no data upload required for inference.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="/download">&#8659; Download APK</a>
 <a class="btn btn-outline btn-lg" href="https://github.com/lynchaos/CellSeg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
