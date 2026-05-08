@@ -121,7 +121,7 @@ Model homepage: [github.com/MouseLand/cellpose](https://github.com/MouseLand/cel
 ### Cellpose cyto3 model weights — redistribution by permission
 
 The Cellpose cyto3 **model weights**, converted to ONNX FP16 format and hosted at
-`huggingface.co/lynchaos/cellpose-cyto3-onnx`, are redistributed with the explicit
+`huggingface.co/kmlyyll/cellpose-cyto3-onnx`, are redistributed with the explicit
 permission of the upstream authors at HHMI Janelia Research Campus, granted by
 **Marius Pachitariu** (May 2026), under the conditions of:
 
