@@ -10,7 +10,7 @@ description: Download the latest CellSeg APK for Android 8.0 (API 26) and later.
 <div class="download-hero-info">
 <div class="app-name">CellSeg</div>
 <div class="app-badges"><span class="badge">Free &amp; open source</span><span class="badge">Android 8.0+</span><span class="badge">No account needed</span><span class="badge">Works offline</span></div>
-<div class="app-meta">On-device cell segmentation &middot; Cellpose cyto3 &middot; ~14 MB model</div>
+<div class="app-meta">On-device cell segmentation &middot; Cellpose cyto3 &middot; ~25 MB model</div>
 </div>
 <div class="download-hero-actions">
 <a class="btn btn-primary btn-lg" href="https://github.com/lynchaos/CellSeg/releases/latest" target="_blank" rel="noopener noreferrer">&#8659;&nbsp; Download latest APK</a>
@@ -30,7 +30,7 @@ Do not use for clinical, diagnostic, or therapeutic decision-making.
 |---|---|
 | Android version | 8.0 (API 26) |
 | App install size | ~15 MB |
-| Model (downloaded on first launch) | ~14 MB |
+| Model (downloaded on first launch) | ~25 MB |
 | Recommended RAM | 2 GB |
 | Supported ABIs | arm64-v8a, x86\_64 |
 
@@ -42,7 +42,7 @@ CellSeg is distributed as a direct APK — it is not on the Play Store.
 2. Grant your browser or file manager permission to install unknown apps.
 3. Tap **Download latest APK** above.
 4. Open the downloaded `.apk` file and tap **Install**.
-5. Launch CellSeg. On first run tap **Download model** to fetch the ~14 MB ONNX file (Wi-Fi recommended).
+5. Launch CellSeg. On first run tap **Download model** to fetch the ~25 MB ONNX file (Wi-Fi recommended).
 
 <div class="note">
 <strong>Tip:</strong> Keep the APK file after installation.

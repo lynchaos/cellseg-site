@@ -21,7 +21,7 @@ Key design goals:
 
 ## The model: Cellpose cyto3
 
-CellSeg uses the **Cellpose cyto3** generalised cell segmentation model, exported to ONNX FP16
+CellSeg uses the **Cellpose cyto3** generalised cell segmentation model, exported to ONNX FP32
 format for on-device inference via ONNX Runtime 1.19 with XNNPACK acceleration.
 
 The cyto3 model is part of the Cellpose project led by **Carsen Stringer** and **Marius Pachitariu** at HHMI Janelia Research Campus.
