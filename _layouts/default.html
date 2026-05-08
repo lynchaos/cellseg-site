@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- SEO / OG -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#006B5E">
+  {% seo %}
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="nav-logo" href="{{ '/' | relative_url }}">
+        <svg class="nav-logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="5" fill="currentColor" opacity=".4"/>
+          <circle cx="7"  cy="7"  r="2" fill="currentColor"/>
+          <circle cx="17" cy="8"  r="1.5" fill="currentColor" opacity=".7"/>
+          <circle cx="8"  cy="16" r="1.5" fill="currentColor" opacity=".7"/>
+          <circle cx="16" cy="16" r="2" fill="currentColor"/>
+        </svg>
+        CellSeg
+      </a>
+      <!-- CSS-only hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="{{ '/download' | relative_url }}"{% if page.url == '/download' or page.url == '/download/' %} class="active"{% endif %}>Download</a></li>
+        <li><a href="{{ '/docs/' | relative_url }}"{% if page.url contains '/docs' %} class="active"{% endif %}>Docs</a></li>
+        <li><a href="{{ '/privacy' | relative_url }}"{% if page.url == '/privacy' or page.url == '/privacy/' %} class="active"{% endif %}>Privacy</a></li>
+        <li><a href="{{ '/about' | relative_url }}"{% if page.url == '/about' or page.url == '/about/' %} class="active"{% endif %}>About</a></li>
+        <li><a href="{{ site.github_repo }}" class="nav-github" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <strong>CellSeg</strong>
+        <p>On-device cell segmentation for Android.<br>
+        Research use only — not a medical device.</p>
+      </div>
+      <div class="footer-col">
+        <strong>Pages</strong>
+        <ul>
+          <li><a href="{{ '/download' | relative_url }}">Download</a></li>
+          <li><a href="{{ '/docs/' | relative_url }}">Documentation</a></li>
+          <li><a href="{{ '/privacy' | relative_url }}">Privacy Policy</a></li>
+          <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Open source</strong>
+        <ul>
+          <li><a href="{{ site.github_repo }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="{{ site.github_repo }}/releases" target="_blank" rel="noopener noreferrer">Releases</a></li>
+          <li><a href="{{ site.github_repo }}/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+          <li><a href="{{ site.github_repo }}/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT Licence</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025–2026 Kemal Yaylali · MIT Licence · CellSeg is not a medical device.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

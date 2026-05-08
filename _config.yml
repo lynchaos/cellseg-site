@@ -1,0 +1,37 @@
+title: CellSeg
+tagline: On-device cell segmentation for Android
+description: >-
+  Segment brightfield, phase-contrast, and fluorescence microscopy images
+  directly on your Android device using Cellpose cyto3 ONNX (FP16).
+  No data leaves your phone when running local inference.
+
+url: "https://cellseg.yaylali.uk"
+baseurl: ""
+
+github_repo: "https://github.com/lynchaos/cellseg"
+github_username: "lynchaos"
+author:
+  name: "Kemal Yaylali"
+  email: "support@yaylali.uk"
+  url: "https://yaylali.uk"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+
+# Exclude from build output
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
+  - .bundle/
+  - vendor/
+  - README.md
