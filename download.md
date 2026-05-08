@@ -78,22 +78,10 @@ shasum -a 256 CellSeg-v0.1.0.apk
 Get-FileHash CellSeg-v0.1.0.apk -Algorithm SHA256
 ```
 
-Compare the output against the hash on the release page.
+Compare the output with the hash listed on the GitHub release page.
 
 ## Open source
 
-CellSeg is MIT-licensed. Source code is available at
-[github.com/lynchaos/CellSeg](https://github.com/lynchaos/CellSeg).
-Third-party licences are listed on the [About](/about) page and in the
-[NOTICE](https://github.com/lynchaos/CellSeg/blob/main/NOTICE) file.
+CellSeg is MIT-licensed. Source code is on [GitHub](https://github.com/lynchaos/CellSeg).
+Third-party licences are listed on the [About](/about) page and in the [NOTICE](https://github.com/lynchaos/CellSeg/blob/main/NOTICE) file.
 
-```bash
-# macOS / Linux
-shasum -a 256 cellseg-*.apk
-
-# Windows (PowerShell)
-Get-FileHash cellseg-*.apk -Algorithm SHA256
-```
-
-  </div>
-</div>
